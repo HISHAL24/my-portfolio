@@ -356,3 +356,61 @@ window.addEventListener('load', () => {
 console.log('%c Welcome to Hishal MT\'s Portfolio! ', 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; font-size: 16px; font-weight: bold; border-radius: 5px;');
 console.log('%c Interested in collaboration? Let\'s connect! ', 'color: #667eea; font-size: 14px; font-weight: bold;');
 
+
+
+// CERTIFICATE MODAL
+
+function openCertificate(imageSrc){
+
+const modal =
+document.getElementById("certificateModal");
+
+const modalImg =
+document.getElementById("certificateImage");
+
+modal.style.display = "block";
+
+modalImg.src = imageSrc;
+
+document.body.style.overflow = "hidden";
+
+}
+
+// CLOSE MODAL
+
+function closeCertificate(){
+
+document.getElementById(
+"certificateModal"
+).style.display = "none";
+
+document.body.style.overflow = "auto";
+
+}
+
+// CLOSE WHEN CLICK OUTSIDE
+
+window.addEventListener("click", function(e){
+
+const modal =
+document.getElementById("certificateModal");
+
+if(e.target === modal){
+
+closeCertificate();
+
+}
+
+});
+
+// ESC KEY CLOSE
+
+document.addEventListener("keydown", function(e){
+
+if(e.key === "Escape"){
+
+closeCertificate();
+
+}
+
+});
