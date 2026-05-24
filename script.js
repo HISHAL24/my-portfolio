@@ -414,3 +414,75 @@ closeCertificate();
 }
 
 });
+
+
+// =========================
+// ANIMATED PROGRESS BAR
+// =========================
+
+const progressBars = document.querySelectorAll(".progress-fill");
+
+window.addEventListener("load", () => {
+
+    progressBars.forEach((bar) => {
+
+        let width = bar.getAttribute("data-width");
+
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 300);
+
+    });
+
+});
+
+/* ========================================= */
+/* DARK MODE TOGGLE */
+/* ========================================= */
+
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    // ICON CHANGE
+
+    const icon = themeToggle.querySelector("i");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+        localStorage.setItem("theme","dark");
+
+    }else{
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+        localStorage.setItem("theme","light");
+    }
+
+});
+
+/* ========================================= */
+/* SAVE MODE */
+/* ========================================= */
+
+window.addEventListener("load", () => {
+
+    const savedTheme = localStorage.getItem("theme");
+
+    const icon = themeToggle.querySelector("i");
+
+    if(savedTheme === "dark"){
+
+        document.body.classList.add("dark-mode");
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    }
+
+});
