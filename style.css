@@ -329,7 +329,7 @@ body {
 }
 
 .bg-gradient {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #e4e7ec 0%, #c3cfe2 100%);
 }
 
 /* About Section */
@@ -1570,4 +1570,253 @@ img {
     .hero {
         text-align: left;
     }
+}
+
+
+/* ========================================= */
+/* DARK MODE TOGGLE */
+/* ========================================= */
+
+.theme-toggle{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--gradient-1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    cursor:pointer;
+    transition:0.4s ease;
+    box-shadow:0 10px 25px rgba(102,126,234,0.35);
+    margin-left:20px;
+    border:none;
+}
+
+.theme-toggle:hover{
+    transform:rotate(180deg) scale(1.08);
+}
+
+/* ========================================= */
+/* DARK MODE BODY */
+/* ========================================= */
+
+body.dark-mode{
+    background:#0f172a;
+    color:#f1f5f9;
+}
+
+/* ========================================= */
+/* NAVBAR */
+/* ========================================= */
+
+body.dark-mode .navbar{
+    background:rgba(15,23,42,0.96) !important;
+    box-shadow:0 5px 25px rgba(0,0,0,0.4);
+}
+
+/* ========================================= */
+/* SECTION BACKGROUND */
+/* ========================================= */
+
+body.dark-mode .section,
+body.dark-mode #skills,
+body.dark-mode #projects,
+body.dark-mode #about,
+body.dark-mode #education,
+body.dark-mode #contact,
+body.dark-mode .bg-gradient{
+    background:#0f172a !important;
+}
+
+/* ========================================= */
+/* TEXT COLORS */
+/* ========================================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6{
+    color:#ffffff !important;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li{
+    color:#cbd5e1;
+}
+
+/* ========================================= */
+/* SECTION TITLES */
+/* ========================================= */
+
+body.dark-mode .section-title h2{
+    background:linear-gradient(135deg,#93c5fd,#c084fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+/* ========================================= */
+/* SKILL CARDS */
+/* ========================================= */
+
+body.dark-mode .skill-card{
+    background:#1e293b;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+body.dark-mode .skill-card::before{
+    background:rgba(255,255,255,0.03);
+}
+
+/* ========================================= */
+/* PROJECT CARDS */
+/* ========================================= */
+
+body.dark-mode .project-card{
+    background:#1e293b;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* ========================================= */
+/* CERTIFICATE CARDS */
+/* ========================================= */
+
+body.dark-mode .certificate-card{
+    background:#1e293b;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* ========================================= */
+/* TIMELINE CARDS */
+/* ========================================= */
+
+body.dark-mode .timeline-card{
+    background:#1e293b;
+}
+
+body.dark-mode .timeline::before{
+    background:var(--gradient-3);
+}
+
+/* ========================================= */
+/* CONTACT */
+/* ========================================= */
+
+body.dark-mode .contact-item,
+body.dark-mode .contact-form{
+    background:#1e293b;
+}
+
+/* ========================================= */
+/* ABOUT STATS */
+/* ========================================= */
+
+body.dark-mode .stat-item{
+    background:#1e293b;
+}
+
+/* ========================================= */
+/* TAGS */
+/* ========================================= */
+
+body.dark-mode .tag,
+body.dark-mode .skill-tags span,
+body.dark-mode .certificate-tags span{
+    background:#273449;
+    border-color:#334155;
+    color:#93c5fd;
+}
+
+/* ========================================= */
+/* INPUTS */
+/* ========================================= */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode .form-control{
+    background:#273449 !important;
+    border:1px solid #334155 !important;
+    color:#ffffff !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#94a3b8;
+}
+
+body.dark-mode .form-floating label{
+    color:#94a3b8;
+}
+
+/* ========================================= */
+/* RESULT BOX */
+/* ========================================= */
+
+body.dark-mode .result-text{
+    background:#273449;
+    color:#e2e8f0;
+}
+
+/* ========================================= */
+/* PROGRESS BAR */
+/* ========================================= */
+
+body.dark-mode .progress-bar{
+    background:#334155;
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+body.dark-mode .footer{
+    background:#020617;
+}
+
+/* ========================================= */
+/* SOCIAL ICONS */
+/* ========================================= */
+
+body.dark-mode .social-icon{
+    background:rgba(255,255,255,0.08);
+}
+
+/* ========================================= */
+/* CURSOR */
+/* ========================================= */
+
+body.dark-mode .cursor-dot{
+    background:#93c5fd;
+}
+
+body.dark-mode .cursor-outline{
+    border-color:#93c5fd;
+}
+
+/* ========================================= */
+/* SMOOTH TRANSITION */
+/* ========================================= */
+
+body,
+.navbar,
+.section,
+.skill-card,
+.project-card,
+.certificate-card,
+.timeline-card,
+.contact-item,
+.contact-form,
+.stat-item,
+input,
+textarea,
+.form-control,
+.footer,
+.social-icon,
+.tag,
+.skill-tags span{
+    transition:0.4s ease;
 }
