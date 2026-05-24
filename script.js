@@ -441,15 +441,67 @@ window.addEventListener("load", () => {
 /* DARK MODE TOGGLE */
 /* ========================================= */
 
+/* ========================================= */
+/* DARK MODE TOGGLE */
+/* ========================================= */
+
 const themeToggle = document.getElementById("themeToggle");
+
+const icon = themeToggle.querySelector("i");
+
+/* ========================================= */
+/* DEFAULT MODE = DARK */
+/* ========================================= */
+
+window.addEventListener("load", () => {
+
+    const savedTheme = localStorage.getItem("theme");
+
+    /* IF NO THEME SAVED */
+    /* OPEN WEBSITE IN DARK MODE */
+
+    if(savedTheme === null){
+
+        document.body.classList.add("dark-mode");
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+    }
+
+    /* SAVED DARK MODE */
+
+    else if(savedTheme === "dark"){
+
+        document.body.classList.add("dark-mode");
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+    }
+
+    /* SAVED LIGHT MODE */
+
+    else{
+
+        document.body.classList.remove("dark-mode");
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+    }
+
+});
+
+/* ========================================= */
+/* TOGGLE CLICK */
+/* ========================================= */
 
 themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("dark-mode");
 
-    // ICON CHANGE
-
-    const icon = themeToggle.querySelector("i");
+    /* DARK MODE ACTIVE */
 
     if(document.body.classList.contains("dark-mode")){
 
@@ -458,13 +510,17 @@ themeToggle.addEventListener("click", () => {
 
         localStorage.setItem("theme","dark");
 
-    }else{
+    }
+
+    /* LIGHT MODE ACTIVE */
+
+    else{
 
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
 
         localStorage.setItem("theme","light");
+
     }
 
 });
-
