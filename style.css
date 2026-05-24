@@ -1420,3 +1420,154 @@ box-shadow:0 10px 25px rgba(0,0,0,0.2);
     transform: translateY(0);
   }
 }
+
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Universal responsive fix */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+}
+
+/* Education Cards */
+.education-card,
+.project-card,
+.skill-card,
+.about-card {
+    width: 100%;
+    margin: 15px 0;
+}
+
+/* Timeline */
+.timeline {
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-item {
+    width: 100%;
+}
+
+/* Images */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Project Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Contact Section */
+.contact-container {
+    flex-direction: column;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (min-width: 768px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* =========================
+   DESKTOP RESPONSIVE
+========================= */
+
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero {
+        text-align: left;
+    }
+}
